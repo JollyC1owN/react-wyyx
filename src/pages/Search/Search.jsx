@@ -27,7 +27,6 @@ export default class Search extends Component {
 			return (<div className="search-list">
 				<p>热门搜索</p>
 				<ul>
-
 					{
 						searchInitArr.map((item, index) => {
 							return (<li className={item.highlight === 1 ? "highlight" : ""} key={index}>

@@ -1,0 +1,66 @@
+@import '../../../../common/stylus/mixins.styl'
+
+.popular-container
+	padding 0 20px 20px 30px
+	box-sizing border-box
+
+	p
+		font-size 32px
+		height 100px
+		line-height 100px
+
+	.popular-top
+		ul
+			display flex
+
+			li
+				width 340px
+				height 200px
+				display flex
+				align-items center
+				font-size 28px
+
+				&:nth-of-type(1)
+					margin 0 10px 10px 0
+					background-color #F9F3E4
+
+				&:nth-of-type(2)
+					margin-bottom 10px
+					background-color #EBEFF6
+
+				span
+					width 100px
+					height 40px
+					margin-left 20px
+
+					.line
+						display block
+						width 50px
+						height 4px
+						background-color #000
+						margin-top 10px
+
+				img
+					width 200px
+					height 200px
+					margin-left 20px
+
+	.popular-bottom
+		ul
+			clearFix()
+
+			li
+				float left
+				width 165px
+				height 180px
+				margin 0 10px 10px 0
+				background-color #F5F5F5
+				text-align center
+				padding-top 10px
+				box-sizing border-box
+
+				img
+					width 120px
+					height 120px
+					margin-left 50%
+					transform translateX(-60px)

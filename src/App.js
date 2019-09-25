@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom'
 import Footer from './components/Footer/Footer';
-import Home from "./pages/Home/Home";
+import Home from './containers/home'
 import CategoryList from "./pages/CategoryList/CategoryList";
 import Profile from "./pages/Profile/Profile";
 import Recommend from "./pages/Recommend/Recommend";

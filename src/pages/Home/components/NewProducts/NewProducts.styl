@@ -1,0 +1,45 @@
+@import '../../../../common/stylus/mixins.styl'
+
+.products-container
+	padding-bottom 30px
+
+	.products-header
+		display flex
+		justify-content space-between
+		height 100px
+		font-size 30px
+		line-height 100px
+		padding 0 30px
+
+		.header-top
+			display flex
+
+		.header-bottom
+			i
+				width 30px
+				height 30px
+				font-size 30px
+
+	.products-list
+		clearFix()
+		padding 0 10px 0 30px
+
+		li
+			float left
+			width 216px
+			height 270px
+			margin-right 20px
+			padding-bottom 30px
+
+			img
+				width 216px
+				height 216px
+				background-color #f5f5f5
+
+			.good-name
+				height 72px
+				line-height 35px
+				margin-top 10px
+
+				.good-price
+					color $red
