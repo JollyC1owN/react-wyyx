@@ -4,8 +4,22 @@
 		同步action 返回的都是一个对象
 		异步action 返回的都是一个函数
 */
-import { SEARCH_RESULT, SEARCH_INIT, HOME_NAVLIST, HOME_POPULLIST, HOME_TIMELIST, HOME_NEWLIST, HOME_CATELIST } from "./action-types"
-import { reqSearchResult, reqInitSearch, reqHomeData } from '../api/index'
+import {
+	SEARCH_RESULT,
+	SEARCH_INIT,
+	HOME_NAVLIST,
+	HOME_POPULLIST,
+	HOME_TIMELIST,
+	HOME_NEWLIST,
+	HOME_CATELIST,
+	SORT_CATELIST
+} from "./action-types"
+import {
+	reqSearchResult,
+	reqInitSearch,
+	reqHomeData,
+	reqCategoryList
+} from '../api/index'
 //根据输入的内容修改搜索结果数组
 export const changeResultArr = (searchResultArr) => ({ type: SEARCH_RESULT, data: searchResultArr })
 // 初始化显示搜索界面的内容
@@ -23,6 +37,9 @@ export const homeNewList = (data) => ({ type: HOME_NEWLIST, data })
 // home中拉杆箱的数据
 export const homeCategoryList = (data) => ({ type: HOME_CATELIST, data })
 
+
+// 分类中的数据
+export const fenleiCategoryList = (data) => ({ type: SORT_CATELIST, data })
 
 
 //异步action  ---必须在store中使用中间件才能这么写
@@ -49,6 +66,8 @@ export const searchInit = () => {
 		}
 	}
 }
+
+
 // 获取home页面中的所有数据
 export const getHomeObj = () => {
 	return async dispatch => {
@@ -68,3 +87,13 @@ export const getHomeObj = () => {
 	}
 }
 
+
+// 获取分类中的数据
+export const getCategoryList = () => {
+	return async (dispatch) => {
+		let result = await reqCategoryList()
+		if (result.code === 0) {
+			dispatch(fenleiCategoryList(result.data.categoryL1List))
+		}
+	}
+}

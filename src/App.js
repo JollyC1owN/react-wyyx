@@ -1,11 +1,11 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom'
-import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer'
 import Home from './containers/home'
-import CategoryList from "./pages/CategoryList/CategoryList";
-import Profile from "./pages/Profile/Profile";
-import Recommend from "./pages/Recommend/Recommend";
-import ShopCart from "./pages/ShopCart/ShopCart";
+import CategoryList from "./containers/categoryList"
+import Profile from "./pages/Profile/Profile"
+import Recommend from "./pages/Recommend/Recommend"
+import ShopCart from "./pages/ShopCart/ShopCart"
 import Search from './containers/search'
 function App () {
   return (

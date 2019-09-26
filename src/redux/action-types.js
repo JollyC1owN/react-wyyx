@@ -14,3 +14,9 @@ export const HOME_TIMELIST = "HOME_TIMELIST"
 export const HOME_NEWLIST = "HOME_NEWLIST"
 // 获取home页面中拉杆箱的数据
 export const HOME_CATELIST = "HOME_CATELIST"
+
+
+
+
+// 获取分类的数据
+export const SORT_CATELIST = "SORT_CATELIST"
